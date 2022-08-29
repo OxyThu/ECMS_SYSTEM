@@ -1,0 +1,29 @@
+﻿
+.nav_container {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+    background-color: #355FB8;
+}
+
+.sub_nav_container{
+    margin-top : 13px;
+    display : flex;
+}
+.nav_child{
+    margin: 1px 30px;
+}
+.nav_link, span{
+    text-decoration: none;
+    font-size : 1.1em;
+    color : black;
+    font-weight : bold;
+    color : white;
+}
+.nav_link:hover{
+    color : black;
+}
+.logo_img {
+    width: 125px;
+    height: auto;
+}

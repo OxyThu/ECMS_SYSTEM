@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="ecms.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel = "icon" href ="asset/img/EC%20Management%20System.png" type = "image/x-icon">
+    <title>ECMS SYSTEM</title>
+    <link href="asset/css/main_master.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+     <header class="nav_container" >
+            <div class="nav_child">   
+             <img src="asset/img/EC%20Management%20System.png" class="logo_img" alt="logo of ecms"/> &nbsp;&nbsp;&nbsp;
+             <asp:Label ID="datetime" runat="server" CssClass="nav_link" Text=""></asp:Label>
+            </div>
+            <div class="sub_nav_container">
+                <div class="nav_child">
+               
+                    <asp:HyperLink ID="Categories_link" runat="server" Text="null" NavigateUrl="~/profile.aspx" CssClass="nav_link">Categories</asp:HyperLink>
+                </div>
+                <div class="nav_child">
+                    <a href="about_us.aspx" class="nav_link">About Us</a>
+                </div>
+               <div class="nav_child">
+                   <asp:LinkButton ID="ToEC" runat="server" Text="Switch To EC" CssClass="nav_link" OnClick="ToEC_Click" ></asp:LinkButton>
+                    <asp:LinkButton ID="ToNormal" runat="server" Text="Switch To Normal" CssClass="nav_link" OnClick="ToNormal_Click" ></asp:LinkButton>
+               </div>
+               <div class="nav_child">
+                   <i class="fa-solid fa-user fs-4"></i> &nbsp;
+                   <asp:HyperLink ID="ProfileLink" runat="server" Text="null" NavigateUrl="~/profile.aspx" CssClass="nav_link"></asp:HyperLink>
+               </div>
+            </div>
+        </header>
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+             <asp:ContentPlaceHolder ID="footer" runat="server">
+        </asp:ContentPlaceHolder>
+        </form>   
+      
+    
+        
+   
+</body>
+</html>
