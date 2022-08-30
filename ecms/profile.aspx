@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="ecms.profile" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="ecms.profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!-- custom css file-->
     <link href="asset/css/profile.css" rel="stylesheet" />
@@ -129,7 +129,7 @@
                </asp:GridView>
          <br />
                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand=""></asp:SqlDataSource>
-                   <asp:Label ID="teslLabel" runat="server" ForeColor="#003300" Text="Label"></asp:Label>
+                
           <br />
             </div>
          </div>

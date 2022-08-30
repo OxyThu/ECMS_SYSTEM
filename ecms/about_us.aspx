@@ -18,7 +18,7 @@
     <div class="row mt-2 d-flex justify-content-center">
         <div class="col-2 mx-1 p-1 bg-primary" style="border-radius:30px;">
             <div >
-                <img src="asset/img/dog.jpg" width="100%" height="auto" style="border-radius:30px;"/>
+                <img src="asset/img/thuaung.jpg" width="100%" height="auto" style="border-radius:30px;"/>
                 <hr />
                 <div class="ps-3">
                        <span ><i class="fa-solid fa-user"></i></span>
@@ -33,7 +33,8 @@
         </div>
       <div class="col-2 mx-3 p-1 bg-primary" style="border-radius:30px;">
             <div >
-                <img src="asset/img/dog.jpg" width="100%" height="auto" style="border-radius:30px;"/>
+             
+                <img src="asset/img/ayemyatthu.jpg" width="100%" height="auto" style="border-radius:30px;"/>
                 <hr />
                 <div class="ps-3">
                        <span ><i class="fa-solid fa-user"></i></span>
@@ -48,7 +49,7 @@
         </div>
           <div class="col-2 mx-3 p-1 bg-primary" style="border-radius:30px;">
             <div >
-                <img src="asset/img/dog.jpg" width="100%" height="auto" style="border-radius:30px;"/>
+                <img src="asset/img/mayd.jpg" width="100%" height="auto" style="border-radius:30px;"/>
                 <hr />
                 <div class="ps-3">
                        <span ><i class="fa-solid fa-user"></i></span>
@@ -78,7 +79,7 @@
         </div>
           <div class="col-2 mx-3 p-1 bg-primary" style="border-radius:30px;">
             <div >
-                <img src="asset/img/dog.jpg" width="100%" height="auto" style="border-radius:30px;"/>
+                <img src="asset/img/soemon.jpg" width="100%" height="auto" style="border-radius:30px;"/>
                 <hr />
                 <div class="ps-3">
                        <span ><i class="fa-solid fa-user"></i></span>

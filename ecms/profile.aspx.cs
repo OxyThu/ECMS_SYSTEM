@@ -38,7 +38,6 @@ namespace ecms
                 string img = rdr["image_url"].ToString();
                 if (img == null)
                     {
-                        Response.Write("hello");
                         defaultImg.CssClass = "profileImg";
                         profileImg.CssClass = "d-none";
                     }
@@ -147,7 +146,7 @@ namespace ecms
             SqlDataAdapter da = new SqlDataAdapter(check_User_ID);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            if (dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0 && student_email != update_email)
             {
                 error_email.Text = "Email Already Exist";
                 error_email.CssClass = "text-white m-2";

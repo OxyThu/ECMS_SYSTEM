@@ -13,7 +13,9 @@
         <div class="container_table">
                <div class="grid_table">
              <h2 class="text-center text-primary "> LASTEST CATEGORIES </h2>
-            <asp:GridView ID="GridView1" CssClass="table_grid" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="category_id" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="rowCommand">
+            <asp:GridView ID="GridView1" CssClass="table_grid" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="category_id" DataSourceID="SqlDataSource1" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="rowCommand">
+
+                <AlternatingRowStyle BackColor="#F7F7F7" />
 
                 <Columns>
                     <asp:BoundField DataField="category_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="category_id" />
@@ -21,17 +23,20 @@
                     <asp:BoundField DataField="category_type" HeaderText="Type" SortExpression="category_type" />
                     <asp:BoundField DataField="amount" HeaderText="Amount" SortExpression="amount" />
                     <asp:BoundField DataField="category_end_date" HeaderText="Deadline" SortExpression="category_end_date" />
-                    <asp:ButtonField ButtonType="Button" Text="JOIN" CommandName="select" ControlStyle-CssClass="btn btn-secondary btn-sm" />
+                    <asp:ButtonField ButtonType="Button" Text="JOIN" CommandName="select" ControlStyle-CssClass="btn btn-secondary btn-sm" >
+<ControlStyle CssClass="btn btn-dark btn-sm w-75"></ControlStyle>
+                    </asp:ButtonField>
                 </Columns>
        
-                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />  
-                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                <SortedDescendingHeaderStyle BackColor="#242121" />
+                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />  
+                <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                <SortedDescendingHeaderStyle BackColor="#3E3277" />
             </asp:GridView>
        
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand=""></asp:SqlDataSource>

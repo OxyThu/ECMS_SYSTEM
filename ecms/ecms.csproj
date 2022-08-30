@@ -147,10 +147,14 @@
     <Content Include="asset\fontawesome\css\v4-shims.min.css" />
     <Content Include="asset\fontawesome\css\v5-font-face.css" />
     <Content Include="asset\fontawesome\css\v5-font-face.min.css" />
+    <Content Include="asset\img\ayemyatthu.jpg" />
     <Content Include="asset\img\dog.jpg" />
     <Content Include="asset\img\EC Management System.png" />
     <Content Include="asset\img\kokoaung.jpg" />
+    <Content Include="asset\img\mayd.jpg" />
     <Content Include="asset\img\profile.jpg" />
+    <Content Include="asset\img\soemon.jpg" />
+    <Content Include="asset\img\thuaung.jpg" />
     <Content Include="category_detail.aspx" />
     <Content Include="create_category.aspx" />
     <Content Include="ec-categories.aspx" />
