@@ -15,7 +15,7 @@ namespace ecms
             DateTime now = DateTime.Now;
             datetime.Text = now.ToString();
             var userid = Session["login_user"];
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             string query = "select * from tbl_student where student_id=@stuid";
             SqlCommand cmd = new SqlCommand(query, conn);

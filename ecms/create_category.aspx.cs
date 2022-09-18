@@ -20,7 +20,7 @@ namespace ecms
 
         protected void SubmitBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             string query = "INSERT INTO tbl_category(category_title,category_type,category_detail,amount,status,category_created_date,category_updated_date,category_end_date) VALUES(@title, @type, @detail,@amount,@status,GETDATE(),GETDATE(),@end)";
             SqlCommand cmd = new SqlCommand(query, conn);

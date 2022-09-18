@@ -20,7 +20,7 @@ namespace ecms
             else
             {
             var userid = Session["login_user"];
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             string query = "select * from tbl_student where student_id=@stuid";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -82,7 +82,7 @@ namespace ecms
 
                 int categoryid = Convert.ToInt32(category_id.Text);
 
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
                 conn.Open();
                 string query = "select tc.category_end_date as end_date, tj.status as status from tbl_joined tj join tbl_category tc on tj.category_id = tc.category_id where tc.category_id = " + categoryid + " and tj.student_id = "+userid+"";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -140,7 +140,7 @@ namespace ecms
             string update_phone = PhoneTxt.Text;
             string update_email = EmailTxt.Text;
             string filename = FileUpload1.FileName.ToString();
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             SqlCommand check_User_ID = new SqlCommand("select student_id from tbl_student where ([email] = '" + update_email + "') ", conn);
             SqlDataAdapter da = new SqlDataAdapter(check_User_ID);

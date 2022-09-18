@@ -26,7 +26,7 @@
                  <span  ><i class="fa-solid fa-envelope"></i></span>
                 <span  > thuthuaung@gmail.com</span> <br />
                  <span  ><i class="fa-solid fa-phone"></i></span>
-                <span  > 09898989898</span>
+                <span  > 09699180723</span>
                 </div>
              
             </div>

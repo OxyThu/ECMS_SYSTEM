@@ -20,7 +20,7 @@ namespace ecms
             string student_email = EmailTxt.Text;
             string password= PasswordTxt.Text;
             string user_id = "";
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             string query = "select student_id from tbl_student where email=@email and password=@password";
             SqlCommand cmd = new SqlCommand(query, conn);

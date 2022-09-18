@@ -49,7 +49,7 @@ namespace ecms
                     TableCell category_id = selectedRow.Cells[0];
                     int categoryid = Convert.ToInt32(category_id.Text);
 
-                    SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
                     conn.Open();
                     string query = "INSERT INTO tbl_joined(student_id,category_id,note,status,created_date,updated_date) VALUES(@stuId, @catId, @note,@status,GETDATE(),GETDATE())";
                     SqlCommand cmd = new SqlCommand(query, conn);

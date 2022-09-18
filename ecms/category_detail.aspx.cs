@@ -20,7 +20,7 @@ namespace ecms
             else
             {
             var category_id = Session["selected_category"];
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             string query = "select * from tbl_category where category_id=@catId";
             string qquery = "select count(student_id) as total from tbl_joined where category_id=" +category_id+" and status= 'pay'";
@@ -85,7 +85,7 @@ namespace ecms
                 getBtn.ControlStyle.CssClass = "d-none";
                 int studentid = Convert.ToInt32(student_id.Text);
 
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
                 conn.Open();
                 string updatequery = "update tbl_joined set status=@status where student_id =@stuId and category_id =@catId";
                 SqlCommand cmd = new SqlCommand(updatequery, conn);
@@ -144,7 +144,7 @@ namespace ecms
             var categoryid = Session["selected_category"];
             string end_date = " ";
             DateTime now = DateTime.Now;
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             string query = "select * from tbl_category where category_id=" + categoryid + "";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -177,7 +177,7 @@ namespace ecms
             var categoryid = Session["selected_category"];
             string end_date = " ";
             DateTime now = DateTime.Now;
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             string query = "select * from tbl_category where category_id=" + categoryid + "";
             SqlCommand cmd = new SqlCommand(query, conn);

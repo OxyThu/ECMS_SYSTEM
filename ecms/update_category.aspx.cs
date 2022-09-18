@@ -20,7 +20,7 @@ namespace ecms
             else
             {
                 var categoryid = Session["selected_category"];
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
                 conn.Open();
                 string query = "select * from tbl_category where category_id="+categoryid+"";
                 SqlCommand ncmd = new SqlCommand(query, conn);
@@ -44,7 +44,7 @@ namespace ecms
             
 
             var categoryid = Session["selected_category"];
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\ecms\ecms\App_Data\db_ecms.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db_ecms.mdf;Integrated Security=True");
             conn.Open();
             string updquery = "update tbl_category set category_title=@title, category_type=@type, category_detail=@detail, amount=@amount, status=@status, category_updated_date=GETDATE(), category_end_date=@enddate where category_id=@catid";
             SqlCommand ncmd = new SqlCommand(updquery, conn);
